@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Flower Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="container">
+        <span class="logo">Our Blooms</span>
+        <nav>
+            <ul>
+                <li class="active"><a href="start.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="order.html">Order</a></li>
+                 <li><a href="https://flowwow.com/en/moscow/"target="_blank">Partner</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero container">
+
+        <div class="hero-info">
+            <img src="img/blooms.svg" alt="">
+            <h1>We're Our Blooms and we're here to help you find your floral story.</h1>
+            <a href="about.html" class="btn">About us</button>
+        </div>
+    </div>
+
+    <div class="container flowers">
+
+        <div class="flowers">
+
+            <div class="block">
+                <a href="gallery.html" target="_self"><img src="img/roses.png" alt="Peonies"></a>
+                <a href="gallery.html" target="_blank"><img src="img/pinkroses.png" alt=""></a>
+                <a href="gallery.html" target="_blank"><img src="img/tulips.png" alt=""></a>
+                <a href="gallery.html" target="_blank"><img src="img/orchid.png" alt=""></a>
+            </div>
+
+            <h2>What We Do</h2>
+            <p>We create beautiful floral arrangements for all occasions. Whether you're celebrating a wedding,
+                birthday, or just want to brighten up your day, Our Blooms has the perfect bouquet for you.</p>
+        </div>
+
+    </div>
+
+
+    <div class="features">
+        <div class="container">
+            <h3>Discover how we can add a touch of natural beauty to your next event.</h3>
+            <div class="info">
+                <div class="block">
+                    <img src="img/Image.png" alt="">
+                    <p>FLORAL INSTALLATIONS</p>
+                </div>
+                <div class="block">
+                    <img src="img/Image-2.png" alt="">
+                    <p>NATIVE PLANT ARRANGEMENTS</p>
+                </div>
+                <div class="block">
+                    <img src="img/Image-3.png" alt="">
+                    <p>CUSTOM FLORAL CONCEPTS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container email">
+        <div class="block">
+            <div>
+                <h2>Stay in the loop</h2>
+                <p>Subscribe to our newsletter for the latest floral trends, tips, and exclusive offers.</p>
+            </div>
+            <div>
+                <form action="https://google.com" target="_blank" method="get">
+                    <input type="text" id="surname" name="surname" required required placeholder="Surname">
+                    <input type="text" id="name" name="name" required placeholder="Name">
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+                    <input type="email" id="email" placeholder="Enter email address">
+                    <input type="group" placeholder="Group number">
+                    <input type="date" name="submission_date" value="2025-10-15">
+                    <button class="submit">Continue</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function check() {
+            const surname = document.getElementById('surname').value;
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+
+            if (surname === '' || name === '' || phone === '' || email === '') {
+                alert('Please fill in all required fields: Surname, Name, Email, and Phone number.');
+            } else {
+                alert('Thank you for subscribing to our updates!');
+            }
+        }
+    </script>
+</body>
+
+</html>
