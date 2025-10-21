@@ -20,76 +20,56 @@
 
     <div class="container">
         <h1>Решение задачи 1014</h1>
+         <p name="formulation">
+        Даны вещественные положительные числа a, b, c, d. Выясните, может ли прямоугольник со сторонами a, b уместиться внутри прямоугольника со сторонами c, d так, чтобы каждая сторона внутреннего прямоугольника была
+параллельна или перпендикулярна стороне внешнего прямоугольника.
+    </p>
 
-        <div class="problem-statement">
-            <h2>Условие задачи:</h2>
-            <p>Даны вещественные положительные числа a, b, c, d. Выясните, может ли прямоугольник со сторонами
-                <span class="highlight">a</span> и <span class="highlight">b</span> уместиться внутри прямоугольника со
-                сторонами <span class="highlight">c</span> и <span class="highlight">d</span> так, чтобы каждая сторона
-                внутреннего прямоугольника была параллельна или перпендикулярна стороне внешнего прямоугольника.
-            </p>
-        </div>
-
-        <div class="input-section">
-            <div class="input-group">
-                <label for="a">Сторона а:</label>
-                <input type="number" id="a" step="any" placeholder="Введите число а">
-            </div>
-
-            <div class="input-group">
-                <label for="b">Сторона b:</label>
-                <input type="number" id="b" step="any" placeholder="Введите число b">
-            </div>
-
-            <div class="input-group">
-                <label for="c">Сторона c:</label>
-                <input type="number" id="c" step="any" placeholder="Введите число c">
-            </div>
-        </div>
-
-        <div class="input-group">
-            <label for="d">Сторона d:</label>
-            <input type="number" id="d" step="any" placeholder="Введите число d">
-        </div>
-    </div>
-
-    <button onclick="checkRectangleFit()">Проверить вместимость</button>
-    <script>
-        function checkRectangleFit() {
-            const a = parseFloat(document.getElementById('a').value);
-            const b = parseFloat(document.getElementById('b').value);
-            const c = parseFloat(document.getElementById('c').value);
-            const d = parseFloat(document.getElementById('d').value);
-
-            if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d) || a <= 0 || b <= 0 || c <= 0 || d <= 0) {
-                document.getElementById('result').innerHTML = '<p class="false">Пожалуйста, введите корректные положительные числа во все поля.</p>';
-                return;
-            }
-
-            const fitsWithoutRotation = (a <= c && b <= d);
-            const fitsWithRotation = (a <= d && b <= c);
-
-            const resultDiv = document.getElementById('result');
-
-            let resultHTML = '';
-
-            if (fitsWithoutRotation || fitsWithRotation) {
-                resultHTML = '<p class="true">Прямоугольник со сторонами ' + a + ' и ' + b + ' может поместиться внутри прямоугольника со сторонами ' + c + ' и ' + d + '.</p>';
-
-            } else {
-                resultHTML = '<p class="false">Прямоугольник со сторонами ' + a + ' и ' + b + ' не может поместиться внутри прямоугольника со сторонами ' + c + ' и ' + d + '.</p>';
-            }
-
-            resultDiv.innerHTML = resultHTML;
-        }
-    </script>
-
-    <div class="result-section">
-        <h2>Результат:</h2>
-        <div id="result"></div>
-    </div>
-
-    </div>
-
-
+<form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+         <ul>
+            <li>
+                
+                Для поисковика:
+                <input name="q" value="search">
+            </li>
+            <li>
+             
+               Формулировка задачи
+                <br>
+                <textarea cols="60" rows="4" id="task" name="formulation"></textarea>
+            </li>
+             <li>
+                a: 
+                <input id="a" name="a" type="number" value="">
+            </li>
+            <li>
+                b:
+                <input id="b" name="b" type="number" value="">
+            </li>
+            <li>
+                c: 
+                <input id="c" name="c" type="number" value="">
+            </li>
+            <li>
+        
+               d: 
+                <input id="d" name="d" type="number" value="">
+            </li>
+            <li>
+               Результат решения задачи:
+                <input id="result" name="result" value="не определен">
+            </li>
+               <li>  
+                действие 1: 
+                <input id="verify" type="button" value="Проверить">
+            </li>
+             <li> действие 2:
+                <input id="send" type="button" value="Отправить">
+            </li>
+         </ul>
+</form>
+<script src="zadacha.js"></script>
+</body>
 </html>
+    
+   
