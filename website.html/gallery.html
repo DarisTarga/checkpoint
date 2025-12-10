@@ -305,5 +305,29 @@
     </main>  
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentLocation = location.href;
+            const menuItems = document.querySelectorAll('.nav-link');
+            const activeColor = '#e83e9c';
+            menuItems.forEach(item => {
+        item.classList.remove('active');
+        item.style.color = '';
+        item.style.borderBottom = '';
+        
+        if (item.href === currentLocation) {
+            item.classList.add('active');
+            
+            
+            item.style.color = activeColor + ' !important';
+            item.style.fontWeight = 'bold';
+            
+           
+            item.style.borderBottom = `2px solid ${activeColor}`;
+            item.style.paddingBottom = '3px';
+        }
+    });
+});
+    </script>
 </body>
 </html>
